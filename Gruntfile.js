@@ -30,22 +30,14 @@ module.exports = function(grunt) {
 
     // Configuration to be run (and then tested).
     my_first_plugin: {
-      default_options: {
+      main: {
         options: {
+          copyText: 'Copyright: My first grunt plugin'
         },
         files: {
-          'tmp/default_options': ['test/fixtures/testing', 'test/fixtures/123']
+          'tmp/index.html': 'test/index.html'
         }
       },
-      custom_options: {
-        options: {
-          separator: ': ',
-          punctuation: ' !!!'
-        },
-        files: {
-          'tmp/custom_options': ['test/fixtures/testing', 'test/fixtures/123']
-        }
-      }
     },
 
     // Unit tests.
